@@ -1,0 +1,1202 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+body{
+    font-family: 'Roboto', sans-serif;
+    
+}
+.top-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 50px;
+    width: 100vw;
+    background-color: #1a2332;
+    padding: 0 80px;
+    flex-wrap: wrap;
+}
+
+.top-header-1-component, 
+.top-header-2-component, 
+.top-header-3-component, 
+.user-dashboard {
+    display: flex;
+    align-items: center;
+    padding: 5px;
+}
+
+.top-header-1-component img, 
+.top-header-2-component img {
+    height: 28px;
+}
+
+.top-header-1-component p, 
+.top-header-2-component p, 
+.top-header-3-component a {
+    font-size: 1rem;
+    color: white;
+    transition: color 0.8s;
+}
+
+.top-header-1-component p:hover,
+.top-header-2-component p:hover,
+.top-header-3-component a:hover {
+    color: #39cabb;
+}
+
+.top-header-3-component {
+    gap: 10px;
+}
+
+.top-header-3-component a {
+    text-decoration: none;
+}
+
+.user-dashboard {
+    background-color: aliceblue;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    justify-content: center;
+}
+
+.temporary-user-page {
+    display: block;
+    position: fixed;
+    right: -1000px;
+    height: 400px;
+    width: 280px;
+    background-color: #1a2332;
+    z-index: 10;
+    transition: 0.2s ease-in-out;
+    animation: shadow-drop-2-center 0.1s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+}
+
+@keyframes shadow-drop-2-center {
+    0% {
+        transform: translateZ(0);
+        box-shadow: 0 0 0 0 rgb(103, 194, 230);
+    }
+    100% {
+        transform: translateZ(50px);
+        box-shadow: 0 0 20px 0px rgb(103, 194, 230);
+    }
+}
+
+.temporary-user-page.active {   
+    border-radius: 12px;
+    top: 14%;
+    position: fixed;
+    z-index: 11;
+    right: 1%;
+}
+
+.main-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100vw;
+    padding: 10px 100px;
+    height: 100px;
+}
+.main-header img {
+    width: 180px;
+}
+.header-anchor-tags {
+    display: flex;
+    gap: 30px;
+    font-family: "Crimson Text", serif;
+    font-weight: 700;
+    font-size: larger;
+}
+
+.header-anchor-tags a {
+    text-decoration: none;
+    color: #1a2332;
+    position: relative;
+    padding-bottom: 5px;
+    transition: color 0.3s ease;
+}
+
+.header-anchor-tags a:hover {
+    color: #39cabb;
+}
+
+.header-anchor-tags a::after {
+    content: '';
+    position: absolute;
+    width: 0%;
+    height: 2px;
+    bottom: 0;
+    left: 50%;
+    background-color: #39cabb;
+    transition: width 0.3s ease, left 0.3s ease;
+}
+
+.header-anchor-tags a:hover::after {
+    width: 100%;
+    left: 0;
+}
+.menu-page {
+    display: none;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 40px;
+}
+
+.menu-page img {
+    height: 50px;
+}
+
+.menu-page #logo {
+    width: auto;
+}
+
+.menu-page #threeline {
+    height: 30px;
+    cursor: pointer;
+}
+
+.threeline-page {
+    display: flex;
+    flex-direction: column;
+    gap: 6%; 
+    font-family: "Crimson Text", serif;
+    font-weight: 700;
+    font-size: larger;
+    position: fixed;
+    right: -1000px;
+    height: 450px;
+    width: 250px;
+    background-color: #1a2332;
+    z-index: 10;
+    transition: 0.2s ease-in-out;
+}
+
+.threeline-page a {
+    margin-left: 5%;
+    padding-top: 7px;
+    margin-top: 5%; 
+    text-decoration: none;
+    height: 40px;
+    text-align: center;
+    width: 120px;
+    border-radius: 20px;
+    color: #39cabb;
+    transition: 0.4s ease-in-out;
+}
+.threeline-page a:hover {
+    background-color: #39cabb;
+    color: #1a2332;
+}
+.threeline-page.active {   
+    border-radius: 12px;
+    top: 13%;
+    position: fixed;
+    z-index: 11;
+    right: 1%;
+    text-decoration: none;
+}
+.register-banner {
+    position: relative;
+    height: 160px;
+    width: 100vw;
+}
+
+.register-banner img {
+    height: 160px;
+    width: 100%;
+}
+
+.register-banner-heading {
+    position: absolute;
+    top: 50%;
+    left: 30%;
+    transform: translate(-50%, -50%);
+    color: white;
+    font-size: 22px;
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-family: "Poppins", sans-serif;
+}
+.registerform
+{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    width: 100vw;
+    height:auto ;
+    background-image: url(bg2.jpg);
+    background-size: cover;
+    
+}
+.register-heading{
+    margin-top: 5%;
+    height: 100px;
+    width: 600px;
+    background-color: #453f85;
+    display: flex;
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+    font-family: "Poppins", sans-serif;
+}
+.register-heading  h1
+{
+    color: white;
+    padding-left: 7%;
+    padding-top: 5%;
+}
+.innerform {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    width: 600px;
+    background-color: aliceblue;
+    transition: transform 0.5s ease-out;
+    transform: translateX(0);
+    overflow: hidden;
+}
+.innerform.slide-out {
+    transform: translateX(-1000px);
+    overflow: hidden;
+}
+.firstname-lastname-container
+{
+    display: grid;
+    grid-template-columns: 1fr 1fr; 
+    padding: 5%;
+}
+.firstname h4, .lastname h4{
+    font-family: "Poppins", sans-serif;
+    color: #808080;
+    font-weight: 500;
+}
+.firstname input, .lastname input{
+    font-family: "Poppins", sans-serif;
+    width: 85%; 
+    height: 100%;
+    border: 1px solid #8080809c;
+    border-radius: 10px;
+    padding-left: 20px;
+}
+.firstname input:focus, 
+.lastname input:focus, 
+.username input:focus, 
+.email input:focus,
+.password input:focus, 
+.confirm-password-container input:focus,
+.phone-container input:focus
+{
+    border-color: #39cabb;
+    outline: none;
+    transition: 0.4s ease-in-out;
+}
+.username-container
+{
+    padding-left: 5%;
+    padding-top: 3%;
+}
+
+.username h4
+{
+    font-family: "Poppins", sans-serif;
+    color: #808080;
+    font-weight: 500;
+}
+.username input
+{
+    width: 88%;
+    height: 45px;
+    border-radius: 10px;
+    font-family: "Poppins", sans-serif;
+    border: 1px solid #8080809c;
+    padding-left: 20px;
+}
+.username input.error{
+    border: 2px solid red;
+    color: red;
+}
+
+.email-container, .phone-container
+{
+    padding-left: 5%;
+    padding-top: 3%;
+}
+.email h4, .phone h4
+{
+    font-family: "Poppins", sans-serif;
+    color: #808080;
+    font-weight: 500;
+}
+.email input
+{
+    width: 88%;
+    height: 45px;
+    border-radius: 10px;
+    font-family: "Poppins", sans-serif;
+    border: 1px solid #8080809c;
+    padding-left: 20px;
+}
+.email input.error{
+    border: 2px solid red;
+    color: red;
+}
+.phone input
+{
+    width: 88%;
+    height: 45px;
+    border-radius: 10px;
+    font-family: "Poppins", sans-serif;
+    border: 1px solid #8080809c;
+    padding-left: 20px;
+}
+.phone input.error{
+    border: 2px solid red;
+    color: red;
+}
+.usertype-container, .gender-container
+{
+    padding-left: 5%;
+    padding-top: 3%;
+}
+.usertype-container h4, .gender-container h4
+{
+    font-family: "Poppins", sans-serif;
+    color: #808080;
+    font-weight: 500;
+}
+.usertype-container label, .gender-container label, .showpassword label
+{
+    font-family: "Poppins", sans-serif;
+    color: #808080;
+    font-weight: 400;
+}
+.password-container, .confirm-password-container
+{
+    padding-left: 5%;
+    padding-top: 3%;
+}
+
+.password h4, .confirm-password-container h4
+{
+    font-family: "Poppins", sans-serif;
+    color: #808080;
+    font-weight: 500;
+}
+.password input, .confirm-password-container input
+{
+    width: 88%;
+    height: 45px;
+    border-radius: 10px;
+    font-family: "Poppins", sans-serif;
+    border: 1px solid #8080809c;
+    padding-left: 20px;
+}
+.termsandcondition
+{
+    padding-left: 5%;
+    padding-top: 3%;
+}
+.termsandcondition label
+{
+    font-family: "Poppins", sans-serif;
+    color: #808080;
+    font-weight: 400;
+}
+.register-button
+{
+    display: flex;
+    padding-left: 5%;
+    padding-top: 3%;
+}
+.register-button button
+{
+    width: 88%;
+    height: 55px;
+    border-radius: 50px;
+    font-family: "Poppins", sans-serif;
+    color: white;
+    font-weight: 500;
+    background-color: #39cabb;
+    border: none;
+    font-size: 16px;
+    transition: 1s ease-in-out;
+}
+.register-button button:hover
+{
+    background-color: #453f85;
+    animation: jello-horizontal 0.9s ease-in-out;
+}
+.OTP-container {
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    position: absolute;
+    width: 600px;
+    height: 80vh;
+    background-color: aliceblue;
+    transition: transform 0.5s ease-in-out;
+    transform: translateX(-1000px); 
+    margin: 0 auto;
+}
+
+.OTP-container.show {
+    display: block;
+    transform: translateX(0); 
+}
+.OTP-container {
+    flex-direction: column;
+    align-items: center;
+    width: 600px;
+    height: auto;
+    margin: 0 auto;
+    padding: 30px;
+    background-color: transparent;
+}
+
+.send-email-name {
+    font-family: "Poppins", sans-serif;
+    text-align: center;
+}
+
+.send-email-name h3 {
+    font-weight: 600;
+    color: #1a2332;
+    margin: 0;
+}
+
+.otp-boxes {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+    gap: 10px;
+}
+
+.otp-boxes input {
+    height: 50px;
+    width: 50px;
+    text-align: center;
+    border-radius: 12px;
+    border: 2px solid #8080809c;
+    font-size: 24px;
+    transition: border-color 0.4s ease-in-out;
+}
+
+.otp-boxes input:focus {
+    border-color: #39cabb;
+    outline: none;
+}
+
+.otp-boxes input::-webkit-outer-spin-button,
+.otp-boxes input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+}
+
+.resendotp {
+    margin-top: 20px;
+    text-align: center;
+}
+.resendotp button {
+    font-family: 'Poppins', sans-serif;
+    background: none;
+    border: none;
+    color: #1e68d7;
+    cursor: pointer;
+    transition: color 0.3s ease;
+}
+.resendotp.disappear button {
+    display: none;
+}
+
+.resendotp button:hover {
+    color: #164a9b;
+}
+
+.otp-verify-btn {
+    margin-top: 40px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+#otp-verify {
+    font-family: 'Poppins', sans-serif;
+    border: none;
+    height: 50px;
+    width: 100%;
+    font-size: 20px;
+    background-color: #1e68d7;
+    color: white;
+    border-radius: 12px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+#otp-verify:hover {
+    background-color: #164a9b;
+}
+#back-btn{
+    color: white;
+    background-color: rgb(165, 164, 164);
+    margin-top: 30%;
+    border: none;
+    height: 40px;
+    width: 100px;
+    font-size: 17px;
+    border-radius: 5px;
+}
+@keyframes jello-horizontal {
+    0% {
+      transform: scale3d(1, 1, 1);
+    }
+    30% {
+      transform: scale3d(1.25, 0.75, 1);
+    }
+    40% {
+      transform: scale3d(0.75, 1.25, 1);
+    }
+    50% {
+      transform: scale3d(1.15, 0.85, 1);
+    }
+    65% {
+      transform: scale3d(0.95, 1.05, 1);
+    }
+    75% {
+      transform: scale3d(1.05, 0.95, 1);
+    }
+    100% {
+      transform: scale3d(1, 1, 1);
+    }
+  }
+
+  .footer
+{
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    grid-template-rows: 1fr;
+    width: 99vw;
+    height: 400px;
+    background-color: #212121;
+    
+    margin-top: 5%;
+}
+.latest-tweet
+{
+    display: flex;
+    flex-direction: column;
+    border: 1px solid rgba(255, 255, 255, 0.293);
+}
+.latest-tweet h3
+{
+    margin-left: 20%;
+    margin-top: 15%;
+    color: #ffffff;
+    font-family: "Poppins", sans-serif;
+    font-weight: 500;
+    letter-spacing: 2px;
+}
+.latest-tweet p
+{
+    font-family: "Poppins", sans-serif;
+    font-size: 13px;
+    color: #6C7D7C;
+    margin-left: 20%;
+    margin-top: 2%;
+}
+.latest-tweet #first-tweet
+{
+    margin-top: 8%;
+}
+.latest-tweet span
+{
+    color: #39cabb;
+}
+.healhub
+{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    font-family: "Poppins", sans-serif;
+    color: #6C7D7C;
+    border: 1px solid rgba(255, 255, 255, 0.293);
+}
+.healhub img
+{
+    height: 80px;
+}
+.healhub p
+{
+    font-size: 13px;
+    text-align: center;
+    margin-top: 3%;
+}
+.social-icons
+{
+    margin-top: 2%;
+}
+.social-icons i
+{
+    padding-left: 6%;
+    padding-top: 6%;
+    background-color: rgba(0, 0, 0, 0.348);
+    border-radius: 50%;
+    font-size: 20px;
+    height: 33px;
+    width: 33px;
+}
+.healhub h3
+{
+    color: #ffffff;
+    font-family: "Poppins", sans-serif;
+    font-weight: 500;
+    letter-spacing: 2px;
+}
+.register-mail
+{
+    margin-top: 3%;
+}
+.register-mail input
+{
+    padding-left: 5%;
+    width: 300px;
+    color: white;
+    height: 30px;
+    border: 1px solid #464646;
+    background-color: #2B2B2B;
+    font-family: "Poppins", sans-serif;
+}
+.register-mail button
+{
+    width: 80px;
+    height: 30px;
+    border: 1px solid #464646;
+    background-color: #2B2B2B;
+    font-family: "Poppins", sans-serif;
+}
+.patientguide-opening
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.patientguide
+{
+    display: flex;
+    flex-direction: column;
+    align-items: end;
+    height: auto;
+    width: 200px;
+}
+.patientguide h3
+{
+    color: #ffffff;
+    font-family: "Poppins", sans-serif;
+    letter-spacing: 2px;
+}
+.patientguide-anchortags
+{
+    display: flex;
+    flex-direction: column;
+    align-items: end;
+    margin-top: 10%;
+}
+.patientguide-anchortags a
+{
+    font-family: "Poppins", sans-serif;
+    text-decoration: none;
+    font-size: 12px;
+    margin-top: 3%;
+    color: #6C7D7C;
+}
+.openinghours
+{
+    display: flex;
+    flex-direction: column;
+    align-items: end;
+    margin-top: 5%;
+}
+.openinghours h3
+{
+    color: #ffffff;
+    font-family: "Poppins", sans-serif;
+    letter-spacing: 2px;
+}
+.openinghours p
+{
+    font-family: "Poppins", sans-serif;
+    text-decoration: none;
+    font-size: 14px;
+    margin-top: 3%;
+    color: #6C7D7C;
+}
+@media (max-width: 1200px)
+{
+    .top-header{
+        width: 100vw;
+    }
+
+    .top-header-1-component {
+        margin-left: 1%;
+    }
+
+    .top-header-3-component {
+        margin-left: 10%;
+    }
+    .user-dashboard{
+        margin-left: 0;
+    }
+    .main-header {
+        width: 100vw;
+        justify-content: space-between;
+    }
+    .main-header img {
+        width: 150px;
+    }
+
+    .header-anchor-tags {
+        flex-direction: row;
+        gap: 30px;
+    }
+    .menu-page {
+        display: none;
+    }
+    .registerform
+    {
+        background-image: url(bg2.jpg);
+        background-size: cover;
+    }
+    .innerform
+    {
+        height: 100%;
+        background-color: aliceblue;
+        border-bottom-left-radius: 15px;
+        border-bottom-right-radius: 15px;
+    }
+    .footer
+    {
+        margin-top: 5%;
+    }
+    .latest-tweet h3
+    {
+        margin-left: 10%;        
+    }
+    .latest-tweet p
+    {
+        margin-top: 0px;
+        margin-left: 5%;
+        font-size: 11px;
+        padding: 5%;
+    }
+    .healhub p
+    {
+        padding: 2%;
+        font-size: 10px;
+    }
+    .register-mail input
+    {
+        width: 150px;
+    }
+}
+
+@media (max-width: 992px)
+{
+    .top-header {
+        padding: 0 10px;
+        width: 100vw;
+    }
+    .top-header-1-component p {
+        font-size: 14px;
+    }
+    .top-header-2-component p {
+        font-size: 14px;
+    }
+
+    .top-header-3-component a {
+        font-size: 14px;
+    }
+    .user-dashboard{
+        margin-left: 0;
+    }
+    .main-header {
+        flex-direction: row;
+        justify-content: space-between;
+        padding: 5 20px;
+        width: 99vw;
+    }
+    .main-header img {
+        width: 134px;
+    }
+    .header-anchor-tags {
+        flex-direction: row;
+        gap: 20px;
+    }
+    .register-banner-heading {
+        position: absolute;
+        top: 50%;
+        left: 35%;
+    }
+    .register-banner-heading h1
+    {
+        font-size: 40px;
+    }
+    .register-heading{
+        margin-top: 5%;
+        height: 90px;
+        width: 550px;
+    }
+    .register-heading  h1
+    {
+        padding-left: 5%;
+        padding-top: 4%;
+    }
+    .innerform
+    {
+        display: flex;
+        flex-direction: column;
+        height: 100%;
+        width: 550px;
+        background-color: aliceblue;
+        border-bottom-left-radius: 15px;
+        border-bottom-right-radius: 15px;
+    }
+    .OTP-container{
+        width: 550px;
+    }
+    .termsandcondition label
+    {
+        font-size: small;
+    }
+    .registerform
+    {
+        background-image: url(bg2.jpg);
+        background-size: cover;
+    }
+    .footer
+    {
+        margin-top: 5%;
+    }
+}
+
+@media (max-width: 768px)
+{
+    .top-header{
+        width: 100vw;
+    }
+    .menu-page{
+        width: 100vw;
+        
+    }
+    .image-slider{
+        width: 100vw;
+    }
+    .top-category{
+        width: 100vw;
+    }
+    .top-category img
+    {
+        width: 100vw;
+    }
+    .top-header-1-component,
+    .top-header-2-component 
+    {
+        margin-left: 10px;
+    }
+    .top-header-1-component p,
+    .top-header-2-component p
+    {
+        font-size: small;
+    }
+    .top-header-3-component {
+        display: none;
+    }
+
+    .main-header {
+        display: none;
+        flex-direction: column;
+        gap: 15px;
+    }
+    .main-header img {
+        width: 130px;
+    }
+
+    .header-anchor-tags {
+        flex-direction: column;
+        gap: 15px;
+    }
+    .menu-page {
+        display: flex;
+    }
+    .threeline-page.active {   
+        border-radius: 12px;
+        top: 13%;
+        position: fixed;
+        z-index: 11;
+        right: 1%;
+        text-decoration: none;
+    }
+    .threeline-page {
+        display: flex;
+        flex-direction: column;
+        gap: 5%; 
+        font-family: "Crimson Text", serif;
+        font-weight: 700;
+        font-size: medium;
+        position: fixed;
+        right: -1000px;
+        height: 280px;
+        width: 100px;
+        background-color: #1a2332;
+        z-index: 10;
+        transition: 0.2s ease-in-out;
+    }
+    .threeline-page a {
+        margin-left: 5%;
+        padding-top: 3px;
+        margin-top: 5%; 
+        text-decoration: none;
+        height: 30px;
+        text-align: center;
+        width: 80px;
+        border-radius: 20px;
+        color: #39cabb;
+        transition: 0.4s ease-in-out;
+    }
+    .register-banner-heading {
+        position: absolute;
+        top: 50%;
+        left: 35%;
+    }
+    .register-banner-heading h1
+    {
+        font-size: 40px;
+    }
+    .register-heading{
+        margin-top: 5%;
+        height: 90px;
+        width: 68vw;
+    }
+    .register-heading  h1
+    {
+        padding-left: 5%;
+        padding-top: 4%;
+    }
+    .innerform
+    {
+        display: flex;
+        flex-direction: column;
+        height: 100%;
+        width: 68vw;
+        background-color: aliceblue;
+        border-bottom-left-radius: 15px;
+        border-bottom-right-radius: 15px;
+    }
+    .OTP-container{
+        width: 68vw;
+    }
+    .footer
+    {
+        margin-top: 5%;
+    }
+    .termsandcondition label
+    {
+        font-size: 12px;
+    }
+    .latest-tweet h3
+    {
+        margin-top: 25%;
+    }
+    .latest-tweet p
+    {
+        font-size: 10px;
+    }
+    .healhub img
+    {
+        height: 70px;
+    }
+    .healhub p
+    {
+        font-size: 10px;
+    }
+    .healhub #line
+    {
+        font-size: 7px;
+    }
+    .healhub h3
+    {
+        margin-top: 3%;
+        font-size: 14px;
+    }
+    .register-mail input
+    {
+        width: 120px;
+        font-size: 10px;
+    }
+    .register-mail button
+    {
+        width: 60px;
+        font-size: 10px;
+    }
+    .patientguide h3
+    {
+        font-size: 17px;
+    }
+    .patientguide-anchortags a
+    {
+        font-size: 12px;
+    }
+    .openinghours h3
+    {
+        font-size: 17px;
+    }
+    .openinghours p
+    {
+        font-size: 12px;
+    }
+}
+
+@media (max-width: 600px)
+{
+    .top-header {
+        height: auto;
+        justify-content: center;
+        flex-direction: column;
+        width: 100vw;
+    }
+    .top-header-1-component p,
+    .top-header-2-component p
+    {
+        font-size: small;
+    }
+    .top-header-1-component,
+    .top-header-2-component {
+        width: 100%;
+        justify-content: center;
+    }
+    .top-header-3-component {
+        display: none;
+    }
+    .temporary-user-page.active {   
+        border-radius: 12px;
+        top: 20%;
+        position: fixed;
+        z-index: 11;
+        right: 1%;
+    }
+    .main-header {
+        flex-direction: column;
+        gap: 10px;
+        display: none;
+    }
+    .main-header img {
+        width: 120px;
+    }
+    .menu-page{
+        width: 100vw;
+    }
+    .header-anchor-tags {
+        flex-direction: column;
+        gap: 10px;
+    }
+    .menu-page {
+        display: flex;
+    }
+    .threeline-page.active {   
+        border-radius: 12px;
+        top: 19%;
+        position: fixed;
+        z-index: 11;
+        right: 1%;
+        text-decoration: none;
+    }
+    .threeline-page {
+        display: flex;
+        flex-direction: column;
+        gap: 5%; 
+        font-family: "Crimson Text", serif;
+        font-weight: 700;
+        font-size: medium;
+        position: fixed;
+        right: -1000px;
+        height: 280px;
+        width: 100px;
+        background-color: #1a2332;
+        z-index: 10;
+        transition: 0.2s ease-in-out;
+    }
+    .threeline-page a {
+        margin-left: 5%;
+        padding-top: 3px;
+        margin-top: 5%; 
+        text-decoration: none;
+        height: 30px;
+        text-align: center;
+        width: 80px;
+        border-radius: 20px;
+        color: #39cabb;
+        transition: 0.4s ease-in-out;
+    }
+    .register-banner
+    {
+        height: 130px;
+    }
+    .register-banner img
+    {
+        height: 130px;
+    }
+    .register-banner-heading {
+        position: absolute;
+        top: 60%;
+        left: 45%;
+    }
+    .register-banner-heading h1
+    {
+        font-size: 30px;
+    }
+    .register-heading{
+        margin-top: 5%;
+        height: 70px;
+        width: 85vw;
+    }
+    .register-heading  h1
+    {
+        padding-left: 5%;
+        padding-top: 4%;
+        font-size: 20px;
+    }
+    .innerform
+    {
+        display: flex;
+        flex-direction: column;
+        height: auto;
+        width: 85vw;
+        background-color: aliceblue;
+        border-bottom-left-radius: 15px;
+        border-bottom-right-radius: 15px;
+    }
+    .OTP-container{
+        width: 85vw;
+    }
+    .termsandcondition label
+    {
+        font-size: 10px;
+    }
+    .footer
+    {
+        margin-top: 5%;
+        grid-template-columns: 1fr;
+        grid-template-rows: repeat(1fr);
+        height: auto;
+    }
+    .latest-tweet,.patientguide-opening,.healhub
+    {
+        border: 0px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+    }
+}

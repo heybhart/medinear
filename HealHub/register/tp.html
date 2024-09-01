@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="tp.css">
+  <title>OTP Verification</title>
+</head>
+<body>
+  <div class="OTP-container">
+    <div class="send-email-name">
+      <h3>Sending Email...</h3>
+    </div>
+    <div class="otp-boxes">
+      <input type="text" id="first-box" maxlength="1" oninput="moveToNext(this, 'second-box')" aria-label="First OTP digit">
+      <input type="text" id="second-box" maxlength="1" oninput="moveToNext(this, 'third-box')" aria-label="Second OTP digit">
+      <input type="text" id="third-box" maxlength="1" oninput="moveToNext(this, 'fourth-box')" aria-label="Third OTP digit">
+      <input type="text" id="fourth-box" maxlength="1" aria-label="Fourth OTP digit">
+    </div>
+    <div class="resend-otp">
+      <button>Resend OTP?</button>
+    </div>
+    <div class="otp-verify-btn">
+      <button id="otp-verify">VERIFY</button>
+    </div>
+  </div>
+
+  <script>
+    function moveToNext(current, nextFieldID) {
+      if (/^\d$/.test(current.value)) {
+        if (current.value.length >= current.maxLength) {
+          document.getElementById(nextFieldID).focus();
+        }
+      } else {
+        current.value = ''; // Clear the input if it's not a number
+      }
+    }
+  </script>
+</body>
+</html>
